@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import <ASIHTTPRequest.h>
+#import <ASINetworkQueue.h>
+@interface ViewController : UIViewController <ASIProgressDelegate, ASIHTTPRequestDelegate>
+{
+    ASIHTTPRequest *request;
+    ASINetworkQueue *queue;
+    UIProgressView *progressView;
+    
+    NSString *path;
+    NSString *savePath;
+    NSString *temp;
+    NSString *tempPath;
+    
+    UILabel *lable;
+    UIImageView *imageView;
+}
 @end
