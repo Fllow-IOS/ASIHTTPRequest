@@ -7,20 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ASIHTTPRequest.h>
-#import <ASINetworkQueue.h>
-@interface ViewController : UIViewController <ASIProgressDelegate, ASIHTTPRequestDelegate>
+#import "ImageRequestViewController.h"
+#import "WebRequestViewController.h"
+@interface ViewController : UIViewController 
 {
-    ASIHTTPRequest *request;
-    ASINetworkQueue *queue;
-    UIProgressView *progressView;
-    
-    NSString *path;
-    NSString *savePath;
-    NSString *temp;
-    NSString *tempPath;
-    
-    UILabel *lable;
-    UIImageView *imageView;
+
 }
+- (IBAction)ImageRequestView:(id)sender;
+- (IBAction)WebRequestView:(id)sender;
+
 @end
